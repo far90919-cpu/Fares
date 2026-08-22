@@ -4,7 +4,7 @@ import requests
 app = Flask(__name__)
 
 # ضع هنا رمز التحقق الخاص بك (يمكنك تغيير هذه الكلمة)
-VERIFY_TOKEN = "fares31"
+VERIFY_TOKEN = "MY_SECRET_BOT_TOKEN_2026"
 # رمز الوصول للصفحة (سنحصل عليه من فيسبوك لاحقاً)
 PAGE_ACCESS_TOKEN = "YOUR_PAGE_ACCESS_TOKEN"
 
@@ -50,4 +50,4 @@ def send_message(recipient_id, message_text):
     requests.post("https://graph.facebook.com/v18.0/me/messages", params=params, headers=headers, json=payload)
 
 if __name__ == "__main__":
-    app.run()                
+    app.run(port=5000)
